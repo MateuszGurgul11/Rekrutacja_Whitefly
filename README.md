@@ -1,4 +1,4 @@
-# Aplikacja Blogowa - Rekrutacja Whitefly
+# Aplikacja Blogowa - Rekrutacja Whitefly Flask
 
 ## Opis
 Projekt jest aplikacją blogową, umożliwiającą użytkownikom dodawanie wiadomości. Aplikacja oferuje dwa tryby dodawania treści: synchroniczny i asynchroniczny, co zapewnia różne opcje interakcji dla użytkowników.
@@ -34,15 +34,13 @@ Aplikacja jest zabezpieczona za pomocą konfiguracji proxy, co zapewnia dodatkow
 2. **uWSGI**: Serwer aplikacji, który komunikuje się z Flaskiem i zarządza procesami.
 3. **Nginx**: Serwer HTTP działający jako proxy dla uWSGI, oferujący lepsze zarządzanie statycznymi plikami i obciążeniem.
 
-### Testy wydajności
-Przed uruchomieniem aplikacji w środowisku produkcyjnym zalecamy przeprowadzenie testów wydajności, aby ocenić skalowalność i odporność aplikacji na wysokie obciążenie. Użyj narzędzi takich jak Apache Bench lub JMeter do symulacji ruchu sieciowego i zidentyfikuj potencjalne wąskie gardła.
 
 ---
 
-# Aplikacja Blogowa - Rekrutacja Whitefly
+# Aplikacja Blogowa - Rekrutacja Whitefly FastAPI
 
 ## Opis
-Projekt to nowoczesna aplikacja blogowa oparta na FastAPI, umożliwiająca użytkownikom dodawanie wiadomości synchronicznie oraz asynchronicznie za pomocą Celery i Redis jako backendu kolejki zadań. Zapewnia efektywne zarządzanie treścią poprzez interfejs API.
+Projekt to aplikacja blogowa oparta na FastAPI, umożliwiająca użytkownikom dodawanie wiadomości synchronicznie oraz asynchronicznie za pomocą Celery i Redis jako backendu kolejki zadań. Zapewnia efektywne zarządzanie treścią poprzez interfejs API.
 
 ## Funkcjonalności
 - **Dodawanie Wiadomości Synchronicznie**: Natychmiastowe przetwarzanie i wyświetlanie wiadomości.
@@ -62,16 +60,14 @@ Projekt to nowoczesna aplikacja blogowa oparta na FastAPI, umożliwiająca użyt
 3. Uruchom aplikację: `uvicorn app.main:app --reload`.
 
 ## Konfiguracja serwerowa i testy wydajności
-Zalecane użycie `FastAPI + Uvicorn + Gunicorn + Nginx`:
-1. **Uvicorn**: ASGI serwer dla FastAPI.
-2. **Gunicorn**: WSGI serwer jako manager dla Uvicorn.
-3. **Nginx**: Serwer HTTP jako proxy do zarządzania ruchem sieciowym.
+Zalecane użycie `FastAPI + Uvicorn + Nginx`:
+1. **FastAPI**: Nowoczesny, szybki framework do tworzenia API z automatyczną dokumentacją, obsługujący asynchroniczność.
+2. **Uvicorn**: Wysokowydajny serwer ASGI zapewniający szybką obsługę asynchronicznych aplikacji, zalecany do użycia z FastAPI.
+3. **Nginx**: Serwer HTTP działający jako zaawansowane proxy, które zarządza ruchem sieciowym i zwiększa bezpieczeństwo, stabilność oraz skalowalność aplikacji.
 
-### Testy wydajności
-Przeprowadź testy wydajności za pomocą Apache Bench lub JMeter.
 
 ## Demo
-Aplikacja jest dostępna online [tutaj](http://161.35.202.8), gdzie można testować jej funkcjonalności.
+Aplikacja jest dostępna online [tutaj]([http://161.35.202.8](http://165.227.146.34)), gdzie można testować jej funkcjonalności.
 
 
 
