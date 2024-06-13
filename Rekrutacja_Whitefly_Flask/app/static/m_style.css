@@ -1,0 +1,23 @@
+.message 
+{
+    background-color: rgba(129, 129, 129, 0.185);
+    margin: 20px;
+    padding: 10px;
+    text-align: left;
+}
+
+.alert {
+    padding: 20px;
+    margin: 5px;
+    color: #970020;
+    background-color: #ffd5de;
+}
+
+.message_form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}

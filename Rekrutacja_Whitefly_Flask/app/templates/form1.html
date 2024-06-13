@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="text-center mt-5">
+            <h1>{% block title %} Wiadomości {% endblock %}</h1>
+            {% for message in messages %}
+                <div class="message">
+                    <h3>{{ message.title }}</h3>
+                    <p>{{ message.content }}</p>
+                    <form action="{{ url_for('delete_message', message_id=message.id) }}" method="post" style="display: inline;">
+                        <button type="submit">Usuń</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
