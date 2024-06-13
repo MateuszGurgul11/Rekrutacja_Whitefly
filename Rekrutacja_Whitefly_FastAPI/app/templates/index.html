@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Wiadomości</h2>
+    <ul>
+    {% for entry in entries %}
+        <li>{{ entry.title }} - {{ entry.content }}
+            <a href="/delete/{{ entry.id }}">Usuń</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
